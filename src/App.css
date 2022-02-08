@@ -1,0 +1,124 @@
+@import url(./styles/global.css);
+@import url(./styles/graficos.css);
+
+.App-logo {
+
+  height: 9.5vh;
+  pointer-events: none;
+
+}
+
+.App-header {
+
+  background-color: #3d434e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0 10px 25px;
+  /* position: fixed; */
+  position: sticky;
+  position: -webkit-sticky;
+  /* height: auto; */
+  top: 0;
+  z-index: 100;
+
+}
+
+.App-header.active {
+  background-color: #d0244c
+}
+
+.App-section {
+
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.App-div-title {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px
+
+}
+
+.App-div-title div h2 {
+
+  margin-bottom: 10px;
+  weight: 700;
+  color: #d0244c
+
+}
+
+.App-div-title div span {
+
+  weight: 500;
+  color:#3d434e
+
+}
+
+.App-div-title button {
+
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #d0244c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  
+
+}
+
+.App-div-title button img {
+
+  margin-right: 11px
+
+}
+
+.App-div-graficos {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.App-grafico:first-child {
+  margin-right: 10px
+}
+
+@media screen and (max-width: 768px) {
+  
+  .App-section {
+
+    padding: 10px
+  
+  }
+
+  .App-header img {
+
+    height: 5vh
+
+  }
+
+  .App-div-graficos {
+    
+    flex-direction: column;
+
+  }
+
+  .App-grafico:first-child {
+
+    margin-bottom: 20px;
+  
+  }
+
+}
