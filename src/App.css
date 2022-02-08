@@ -1,10 +1,9 @@
 @import url(./styles/global.css);
 @import url(./styles/graficos.css);
 
-.App-logo {
+.App {
 
-  height: 9.5vh;
-  pointer-events: none;
+  /* overflow-x: hidden; */
 
 }
 
@@ -14,26 +13,104 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  padding: 10px 0 10px 25px;
-  /* position: fixed; */
+  justify-content: space-between;
+  padding: 10px 25px;
   position: sticky;
   position: -webkit-sticky;
-  /* height: auto; */
   top: 0;
   z-index: 100;
 
 }
 
-.App-header.active {
-  background-color: #d0244c
+.App-header div {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+
+}
+
+.App-header ul {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  list-style: none;
+  padding: 0;
+  margin-right: 10px
+  
+}
+
+.App-link {
+  
+  color: #fff;
+  display: inline-block;
+  position: relative;
+
+}
+
+.App-link:after {
+
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    margin-top: 10px;
+    background-color: #d0244c;
+    transition: transform 0.3s;
+
+}
+
+.App-link:hover:after {
+
+  transform: scaleX(1);
+
+}
+
+
+.App-header button {
+
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: #d0244c;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.325);
+  transition: all 300ms ease-in-out;
+
+}
+
+.App-header button:hover {
+  background-color: #e22854;
+}
+
+.App-logo {
+
+  height: 9.5vh;
+  pointer-events: none;
+
 }
 
 .App-section {
 
+  display: flex;
+  flex-direction: column;
   padding: 25px;
   justify-content: center;
   align-items: center;
+  width: 95vw;
+  margin: 0 auto
 
 }
 
@@ -43,21 +120,22 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px
+  margin: 30px 0;
+  width: 100%;
 
 }
 
 .App-div-title div h2 {
 
-  margin-bottom: 10px;
-  weight: 700;
+  margin-bottom: 5px;
+  font-weight: 700;
   color: #d0244c
 
 }
 
 .App-div-title div span {
 
-  weight: 500;
+  font-weight: 500;
   color:#3d434e
 
 }
@@ -71,9 +149,15 @@
   background: #d0244c;
   color: #fff;
   font-size: 16px;
-  cursor: pointer;
   text-align: center;
-  
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.225);
+  transition: all 300ms ease-in-out;
+
+}
+
+.App-div-title button:hover {
+
+  background-color: #e22854;
 
 }
 
@@ -88,24 +172,117 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px
 
 }
 
 .App-grafico:first-child {
+
   margin-right: 10px
+
 }
 
-@media screen and (max-width: 768px) {
-  
+.App-footer {
+
+  width: 32vw;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px
+
+}
+
+.App-footer span {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.App-footer a {
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .App-header {
+    
+    background-color: pink;
+    padding: 10px;
+
+  }
+
+  .App-header img {
+
+    height: 5vh
+
+  }
+
   .App-section {
 
     padding: 10px
   
   }
 
+  .App-div-title div span {
+
+    font-size: 1rem
+
+  }
+
+  .App-div-title div h2 {
+
+    font-size: 1.2rem;
+    margin-bottom: 5px
+
+  }
+
+  .App-div-graficos {
+    
+    flex-direction: column;
+
+  }
+
+  .App-grafico:first-child {
+
+    margin-bottom: 20px;
+  
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .App-header {
+
+    padding: 10px;
+    background-color: #d0244c;
+
+  }
+
   .App-header img {
 
     height: 5vh
+
+  }
+
+  .App-section {
+
+    padding: 10px
+  
+  }
+
+  .App-div-title div span {
+
+    font-size: 1rem
+
+  }
+
+  .App-div-title div h2 {
+
+    font-size: 1.2rem;
+    margin-bottom: 5px
 
   }
 
@@ -121,4 +298,45 @@
   
   }
 
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .App-header {
+
+    background-color: rgb(35, 180, 6);
+
+  }
+
+  .App-header img {
+
+    height: 10vh
+
+  }
+
+  .App-section {
+
+    width: 80vw;
+
+  }
+
+  .App-div-title {
+
+    width: 100%;
+
+  }
+
+  .App-div-graficos {
+    
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  .App-grafico:first-child {
+
+    margin-bottom: 20px;
+  
+  }
 }

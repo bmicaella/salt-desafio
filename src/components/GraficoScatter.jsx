@@ -9,10 +9,26 @@ export default class GraficoScatter extends Component {
         options: {
 
             responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 330
+                    }
+                },
+            },
+            {
                 breakpoint: 768,
                 options: {
                     chart: {
-                        width: 350
+                        width: 450
+                    }
+                },
+            },
+            {
+                breakpoint: 1000,
+                options: {
+                    chart: {
+                        width: 500
                     }
                 },
             }],
@@ -85,7 +101,7 @@ export default class GraficoScatter extends Component {
         return (
             <div className="App-grafico">
 
-            <div className="App-grafico-title">
+                <div className="App-grafico-title">
                     <h2>Scatter</h2>
                     <img src={info} alt="Informação"></img>
                 </div>

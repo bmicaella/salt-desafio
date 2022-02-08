@@ -6,23 +6,29 @@ import GraficoScatter from './components/GraficoScatter';
 import './App.css';
 import logo from './img/logo.png';
 import filtrar from './img/filter-icon.png';
+import github from './img/github-icon.png';
 
 function App() {
-  const [header, setHeader] = useState(false);
-
-  const changeHeaderBackground = () => {
-    if (window.scrollY >= 40) 
-        setHeader(true)
-    else
-        setHeader(false)
-  }
 
   return (
     <div className="App">
 
-      <header className={header ? 'App-header active' : 'App-header'}>
+      <header className="App-header">
 
         <img src={logo} alt="Logo Salt RH" className="App-logo"/>
+
+        <div>
+          
+          <ul>
+            <li><a href="https://saltrh.com/" target="_blank" className="App-link" rel="noopener noreferrer">Início</a></li>
+            <li><a href="https://saltrh.com/#solucoes" target="_blank" className="App-link" rel="noopener noreferrer">Soluções</a></li>
+            <li><a href="https://saltrh.com/#contrate" target="_blank" className="App-link" rel="noopener noreferrer">Contrate</a></li>
+            <li><a href="https://saltrh.com/conteudos-people-analytics/" target="_blank" className="App-link" rel="noopener noreferrer">Conteúdo</a></li>
+          </ul>
+
+          <button>Quero testar!</button>
+
+        </div>
 
       </header>
 
@@ -49,6 +55,22 @@ function App() {
 
       </section>
 
+      <footer className="App-footer">
+
+        <span>
+          Desenvolvido com React JS
+          | Por Micaella Pereira
+          
+          <a href="https://github.com/bmicaella/salt-desafio" target="_blank"
+          rel="noopener noreferrer">
+            <img src={github} alt="Ícone do Github" />
+          </a>
+        </span>
+
+        <hr/>
+
+      </footer>
+    
     </div>
   )
 }

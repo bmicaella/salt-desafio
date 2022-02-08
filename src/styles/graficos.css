@@ -15,7 +15,7 @@
 .App-grafico h2 {
 
   color: #282c34;
-  weight: 700;
+  font-weight: 700;
 
 }
 
@@ -40,6 +40,20 @@
   .App-grafico {
     width: 87vw;
     padding: 10px 20px 0 10px;
+  }
+
+  .App-grafico h2 {
+
+    font-size: 1rem
+  
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .App-grafico {
+    margin: 0;
+    width: 94%;
   }
 
 }

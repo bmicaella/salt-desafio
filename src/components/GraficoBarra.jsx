@@ -9,10 +9,26 @@ export default class GraficoBarra extends Component {
         options: {
 
             responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 330
+                    }
+                },
+            },
+            {
                 breakpoint: 768,
                 options: {
                     chart: {
-                        width: 350
+                        width: 450
+                    }
+                },
+            },
+            {
+                breakpoint: 1000,
+                options: {
+                    chart: {
+                        width: 500
                     }
                 },
             }],
