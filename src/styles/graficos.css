@@ -34,12 +34,43 @@
   margin-left: 20px
 
 }
+@media screen and (max-width: 280px) {
 
-@media screen and (max-width: 768px) {
+  .App-grafico {
+    padding: 10px 0 0 6px;
+    width: 92vw;
+  }
+
+  .App-grafico h2 {
+    font-size: 1.1rem
+  }
+  
+}
+
+@media screen and (min-width: 281px) and (max-width: 480px) {
   
   .App-grafico {
-    width: 87vw;
+
     padding: 10px 20px 0 10px;
+    width: 87vw;
+
+  }
+
+  .App-grafico h2 {
+
+    font-size: 1rem
+  
+  }
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  
+  .App-grafico {
+
+    padding: 15px 20px 0 15px;
+    width: 88vw;
+
   }
 
   .App-grafico h2 {
@@ -52,8 +83,10 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
   .App-grafico {
+
     margin: 0;
     width: 94%;
+    
   }
 
 }

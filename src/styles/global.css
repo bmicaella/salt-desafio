@@ -5,10 +5,10 @@
 }
 
 body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
     background: #ebebeb;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
@@ -17,13 +17,13 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 button {
-    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 ::-webkit-scrollbar {

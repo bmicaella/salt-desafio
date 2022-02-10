@@ -8,11 +8,40 @@ export default class GraficoScatter extends Component {
     state = {
         options: {
 
-            responsive: [{
+            responsive: [
+                {
+                    breakpoint: 300,
+                    options: {
+                        chart: {
+                            width: 260,
+                            height: 330
+                        }
+                    },
+                },
+                {
+                    breakpoint: 380,
+                    options: {
+                        chart: {
+                            width: 330,
+                            height: 330
+                        }
+                    },
+                },
+                {
+                    breakpoint: 420,
+                    options: {
+                        chart: {
+                            width: 355,
+                            height: 330
+                        }
+                    },
+                },
+                {
                 breakpoint: 480,
                 options: {
                     chart: {
-                        width: 330
+                        width: 330,
+                        height: 350
                     }
                 },
             },
@@ -20,7 +49,17 @@ export default class GraficoScatter extends Component {
                 breakpoint: 768,
                 options: {
                     chart: {
-                        width: 450
+                        width: 450,
+                        height: 380
+                    }
+                },
+            },
+            {
+                breakpoint: 800,
+                options: {
+                    chart: {
+                        width: 670,
+                        height: 400
                     }
                 },
             },
@@ -28,7 +67,17 @@ export default class GraficoScatter extends Component {
                 breakpoint: 1000,
                 options: {
                     chart: {
-                        width: 500
+                        width: 720,
+                        height: 400
+                    }
+                },
+            },
+            {
+                breakpoint: 1200,
+                options: {
+                    chart: {
+                        width: 900,
+                        height: 415
                     }
                 },
             }],
@@ -44,32 +93,26 @@ export default class GraficoScatter extends Component {
             fill: {
                 colors: ['#d0244c']
             },
-            
-            //cinza #181c24
-            //rosa #d0244c
 
             grid: {
-                row: {
-                  colors: ['#ffffff']
+                xaxis: {
+                    lines: {
+                      show: true
+                    }
                 },
-                column: {
-                  colors: ['#ffffff']
-                }
-            },
-
-            plotOptions: {
-                bar: {
-                  borderRadius: 4,
-                  horizontal: true,
+                yaxis: {
+                    lines: {
+                      show: true
+                    }
                 }
             },
 
             xaxis: {
                 tickAmount: 10,
                 labels: {
-                  formatter: function(val) {
-                    return parseFloat(val).toFixed(1)
-                  }
+                    formatter: function(val) {
+                        return parseFloat(val).toFixed(1)
+                    }
                 }
             },
 

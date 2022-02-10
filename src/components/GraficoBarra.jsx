@@ -8,11 +8,40 @@ export default class GraficoBarra extends Component {
     state = {
         options: {
 
-            responsive: [{
+            responsive: [
+                {
+                    breakpoint: 300,
+                    options: {
+                        chart: {
+                            width: 260,
+                            height: 330
+                        }
+                    },
+                },
+                {
+                    breakpoint: 380,
+                    options: {
+                        chart: {
+                            width: 330,
+                            height: 330
+                        }
+                    },
+                },
+                {
+                    breakpoint: 420,
+                    options: {
+                        chart: {
+                            width: 355,
+                            height: 330
+                        }
+                    },
+                },
+                {
                 breakpoint: 480,
                 options: {
                     chart: {
-                        width: 330
+                        width: 330,
+                        height: 350
                     }
                 },
             },
@@ -20,7 +49,17 @@ export default class GraficoBarra extends Component {
                 breakpoint: 768,
                 options: {
                     chart: {
-                        width: 450
+                        width: 450,
+                        height: 380
+                    }
+                },
+            },
+            {
+                breakpoint: 800,
+                options: {
+                    chart: {
+                        width: 670,
+                        height: 400
                     }
                 },
             },
@@ -28,7 +67,16 @@ export default class GraficoBarra extends Component {
                 breakpoint: 1000,
                 options: {
                     chart: {
-                        width: 500
+                        width: 720,
+                        height: 400
+                    }
+                },
+            },
+            {
+                breakpoint: 1200,
+                options: {
+                    chart: {
+                        width: 900
                     }
                 },
             }],
@@ -36,7 +84,8 @@ export default class GraficoBarra extends Component {
             chart: {
                 type: 'bar',
                 height: 300,
-                fontFamily:  'Montserrat',                        color:  '#2822c34'
+                fontFamily:  'Montserrat',                        
+                color:  '#2822c34'
             },
 
             fill: {
@@ -45,21 +94,21 @@ export default class GraficoBarra extends Component {
 
             grid: {
                 xaxis: {
-                  lines: {
-                    show: true
-                  }
+                    lines: {
+                        show: true
+                    }
                 },
                 yaxis: {
-                  lines: {
-                    show: true
-                  }
+                    lines: {
+                        show: true
+                    }
                 },
               },
 
             plotOptions: {
                 bar: {
-                  borderRadius: 4,
-                  horizontal: true,
+                    borderRadius: 4,
+                    horizontal: true,
                 }
             },
 
@@ -67,11 +116,8 @@ export default class GraficoBarra extends Component {
                 categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany']
             },
             
-            
-
             dataLabels: {
                 enabled: false,
-                
             }   
         },
 
